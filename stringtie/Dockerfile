@@ -25,6 +25,6 @@ RUN cd bioinformatics &&\
 
 #Install ballgown
 RUN R -e "install.packages(c('BiocManager'), dependencies=TRUE, repos='http://cran.rstudio.com/')" &&\
-	R -e "BiocManager::install(c('ballgown'))"
+	R -e "BiocManager::install('ballgown')"
 
 ENV ADDPATH="$ADDPATH:/bioinformatics/stringtie:/bioinformatics/gffcompare"
